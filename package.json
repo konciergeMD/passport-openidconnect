@@ -1,14 +1,16 @@
 {
   "name": "passport-openidconnect",
-  "version": "0.0.1",
-  "description": "OpenID Connect authentication strategy for Passport.",
-  "keywords": ["passport", "openid", "openidconnect", "auth", "authn", "authentication", "identity"],
+  "version": "0.0.2",
+  "description": "OpenID Connect authentication strategy for Passport. Modified by Accolade.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jaredhanson/passport-openidconnect.git"
+    "url": "git://github.com/konciergeMD/passport-openidconnect.git"
+  },
+    "publishConfig": {
+    "registry": "https://accolade.artifactoryonline.com/accolade/api/npm/npm-local"
   },
   "bugs": {
-    "url": "http://github.com/jaredhanson/passport-openidconnect/issues"
+    "url": "http://github.com/konciergeMD/passport-openidconnect/issues"
   },
   "author": {
     "name": "Jared Hanson",
@@ -17,7 +19,7 @@
   },
   "licenses": [ {
     "type": "MIT",
-    "url": "http://www.opensource.org/licenses/MIT" 
+    "url": "http://www.opensource.org/licenses/MIT"
   } ],
   "main": "./lib",
   "dependencies": {
