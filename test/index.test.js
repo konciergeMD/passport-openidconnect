@@ -8,7 +8,7 @@ describe('passport-openid', function() {
   });
     
   it('should export Strategy', function() {
-    expect(openid.Strategy).to.be.a('function');
+    expect(openid.AcpStrategy).to.be.a('function');
   });
   
   it('should export configuration functions', function() {
