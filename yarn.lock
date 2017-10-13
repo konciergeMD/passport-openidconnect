@@ -2,6 +2,47 @@
 # yarn lockfile v1
 
 
+"@types/express-serve-static-core@*":
+  version "4.0.53"
+  resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/@types/express-serve-static-core/-/express-serve-static-core-4.0.53.tgz#1723a35d1447f2c55e13c8721eab3448e42f4d82"
+  dependencies:
+    "@types/node" "*"
+
+"@types/express-session@*":
+  version "1.15.3"
+  resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/@types/express-session/-/express-session-1.15.3.tgz#39b6995393832284a1f368f4f1ae48acaab2aac9"
+  dependencies:
+    "@types/express" "*"
+    "@types/node" "*"
+
+"@types/express@*":
+  version "4.0.37"
+  resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/@types/express/-/express-4.0.37.tgz#625ac3765169676e01897ca47011c26375784971"
+  dependencies:
+    "@types/express-serve-static-core" "*"
+    "@types/serve-static" "*"
+
+"@types/mime@*":
+  version "2.0.0"
+  resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/@types/mime/-/mime-2.0.0.tgz#5a7306e367c539b9f6543499de8dd519fac37a8b"
+
+"@types/node@*":
+  version "8.0.33"
+  resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/@types/node/-/node-8.0.33.tgz#1126e94374014e54478092830704f6ea89df04cd"
+
+"@types/passport@*":
+  version "0.3.4"
+  resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/@types/passport/-/passport-0.3.4.tgz#82929c7427091ba73273fcb963fdef8056bddbe7"
+  dependencies:
+    "@types/express" "*"
+
+"@types/serve-static@*":
+  version "1.7.32"
+  resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/@types/serve-static/-/serve-static-1.7.32.tgz#0f6732e4dab0813771dd8fc8fe14940f34728b4c"
+  dependencies:
+    "@types/express-serve-static-core" "*"
+    "@types/mime" "*"
+
 assertion-error@1.0.0:
   version "1.0.0"
   resolved "https://accolade.artifactoryonline.com/accolade/api/npm/npm-virtual/assertion-error/-/assertion-error-1.0.0.tgz#c7f85438fdd466bc7ca16ab90c81513797a5d23b"

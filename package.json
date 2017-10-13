@@ -1,6 +1,6 @@
 {
   "name": "passport-openidconnect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OpenID Connect authentication strategy for Passport. Modified by Accolade.",
   "repository": {
     "type": "git",
@@ -30,7 +30,9 @@
   },
   "devDependencies": {
     "mocha": "1.x.x",
-    "chai": "1.x.x"
+    "chai": "1.x.x",
+    "@types/passport": "*",
+    "@types/express-session": "*"
   },
   "scripts": {
     "test": "NODE_PATH=./lib node_modules/.bin/mocha --reporter spec --require test/node/bootstrap test/*.test.js"
