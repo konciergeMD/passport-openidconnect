@@ -8,7 +8,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/express-session@*":
+"@types/express-session@1.15.3":
   version "1.15.3"
   resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/@types/express-session/-/express-session-1.15.3.tgz#39b6995393832284a1f368f4f1ae48acaab2aac9"
   dependencies:
@@ -30,7 +30,7 @@
   version "8.0.33"
   resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/@types/node/-/node-8.0.33.tgz#1126e94374014e54478092830704f6ea89df04cd"
 
-"@types/passport@*":
+"@types/passport@0.3.4":
   version "0.3.4"
   resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/@types/passport/-/passport-0.3.4.tgz#82929c7427091ba73273fcb963fdef8056bddbe7"
   dependencies:
