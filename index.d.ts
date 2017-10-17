@@ -1,6 +1,6 @@
-/// <reference types="express-session" />
-
 import express = require('express');
+
+/// <reference types="express-session" />
 
 declare namespace passport_openidconnect {
 

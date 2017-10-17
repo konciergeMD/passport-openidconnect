@@ -8,7 +8,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/express-session@1.15.3":
+"@types/express-session@^1.15.3":
   version "1.15.3"
   resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/@types/express-session/-/express-session-1.15.3.tgz#39b6995393832284a1f368f4f1ae48acaab2aac9"
   dependencies:
@@ -155,20 +155,20 @@ oauth@0.9.x:
   version "0.9.15"
   resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/oauth/-/oauth-0.9.15.tgz#bd1fefaf686c96b75475aed5196412ff60cfb9c1"
 
-passport@~0.1.1:
-  version "0.1.18"
-  resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/passport/-/passport-0.1.18.tgz#c8264479dcb6414cadbb66752d12b37e0b6525a1"
+passport-strategy@1.x.x:
+  version "1.0.0"
+  resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/passport-strategy/-/passport-strategy-1.0.0.tgz#b5539aa8fc225a3d1ad179476ddf236b440f52e4"
+
+passport@0.4.0:
+  version "0.4.0"
+  resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/passport/-/passport-0.4.0.tgz#c5095691347bd5ad3b5e180238c3914d16f05811"
   dependencies:
+    passport-strategy "1.x.x"
     pause "0.0.1"
-    pkginfo "0.2.x"
 
 pause@0.0.1:
   version "0.0.1"
   resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/pause/-/pause-0.0.1.tgz#1d408b3fdb76923b9543d96fb4c9dfd535d9cb5d"
-
-pkginfo@0.2.x:
-  version "0.2.3"
-  resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/pkginfo/-/pkginfo-0.2.3.tgz#7239c42a5ef6c30b8f328439d9b9ff71042490f8"
 
 sax@>=0.1.1:
   version "1.2.2"
