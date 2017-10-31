@@ -26,7 +26,8 @@ build:
   #   - cp ./test-results.xml shippable/testresults
 
   on_success:
-    - cp ./coverage/cobertura-coverage.xml shippable/codecoverage
+    # uncomment this step once test results are being sent as output
+    # - cp ./coverage/cobertura-coverage.xml shippable/codecoverage
     - if [ "$IS_PRELEASE" = "true" ]; then npm run build; npm publish; elif [ "$IS_RELEASE" = "true" ]; then NODE_ENV=production npm run build; npm publish; fi
 
 integrations:
