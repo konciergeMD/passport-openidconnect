@@ -1,0 +1,54 @@
+language: node_js
+
+env:
+  global:
+    - NODE_JS_VERSION=8.5.0
+
+build:
+  pre_ci_boot:
+    image_name: drydock/u16nodall
+    image_tag: v5.6.3
+    pull: true
+
+  ci:
+    - sudo apt-get install cpio
+    - source ~/.nvm/nvm.sh && nvm install $NODE_JS_VERSION && npm install npm@latest -g
+    - mkdir -p shippable/testresults
+    - mkdir -p shippable/codecoverage
+    - curl -u$ARTIFACTORY_USERNAME:$ARTIFACTORY_PASSWORD https://accolade.jfrog.io/accolade/api/npm/auth -o $HOME/.npmrc
+    - npm config set registry https://accolade.jfrog.io/accolade/api/npm/npm-virtual
+    - yarn install
+    - yarn test
+    - if [[ $BRANCH =~ ^develop$|^release/.*$ ]]; then ./build-utils/sonar-scan.sh -v $BUILD_NUMBER ; fi
+
+  post_ci:
+    - cp ./test-results.xml shippable/testresults
+
+  on_success:
+    - cp ./coverage/cobertura-coverage.xml shippable/codecoverage
+    - if [ "$IS_PRELEASE" = "true" ]; then npm run build; npm publish; elif [ "$IS_RELEASE" = "true" ]; then NODE_ENV=production npm run build; npm publish; fi
+
+integrations:
+  generic:
+    - integrationName: sonar
+
+  hub:
+    - integrationName: acp-artifactory
+      type: artifactory
+
+  notifications:
+    # (optional) switch off email notifications
+    - integrationName: email
+      type: email
+      on_success: never
+      on_failure: never
+      on_pull_request: never
+
+    # (optional) Set slack notifications
+    - integrationName: accolade-slack
+      type: slack
+      recipients: #FILL IN: Who to notify (#channel or @user.name)
+        - "#atlas-dev-alerts"
+      on_success: always
+      on_failure: always
+      on_pull_request: always
