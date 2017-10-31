@@ -21,8 +21,9 @@ build:
     - yarn test
     - if [[ $BRANCH =~ ^develop$|^release/.*$ ]]; then ./build-utils/sonar-scan.sh -v $BUILD_NUMBER ; fi
 
-  post_ci:
-    - cp ./test-results.xml shippable/testresults
+  # uncomment this step once test results are being sent as output
+  # post_ci:
+  #   - cp ./test-results.xml shippable/testresults
 
   on_success:
     - cp ./coverage/cobertura-coverage.xml shippable/codecoverage
