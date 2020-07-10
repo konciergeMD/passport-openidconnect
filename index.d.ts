@@ -2,6 +2,13 @@
 
 import express = require('express');
 
+declare module 'passport' {
+    export interface AuthenticateOptions {
+        callbackURL: string,
+        prompt: string
+    }
+}
+
 declare namespace passport_openidconnect {
 
     class AcpStrategy {
@@ -22,6 +29,7 @@ declare namespace passport_openidconnect {
                                      profile?: OICProfile,
                                      accessToken?: string,
                                      refreshToken?: string,
+                                     params?: any,
                                      callback?: (err: string, user: any, info: string) => void) => void;
 
     interface OICProfile {
@@ -44,7 +52,7 @@ declare namespace passport_openidconnect {
         userInfoURL: string,
         clientID: string,
         clientSecret: string,
-        callbackURL: string,
+        callbackURL?: string,
         scope: string,
         passReqToCallback?: boolean,
         prompt?: string
