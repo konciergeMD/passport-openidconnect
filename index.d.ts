@@ -52,7 +52,7 @@ declare namespace passport_openidconnect {
         userInfoURL: string,
         clientID: string,
         clientSecret: string,
-        callbackURL?: string,
+        callbackURL: string,
         scope: string,
         passReqToCallback?: boolean,
         prompt?: string
