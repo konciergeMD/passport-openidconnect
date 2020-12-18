@@ -1,25 +1,24 @@
 language: node_js
 
-env:
-  global:
-    - NODE_JS_VERSION=8.5.0
+node_js:
+    - 12.16.1
 
 build:
+  pre_ci:
+    - aws ecr get-login --no-include-email --region us-east-1 --registry-ids 063473290800 | bash
+
   pre_ci_boot:
-    image_name: drydock/u16nodall
-    image_tag: v5.6.3
+    image_name: 063473290800.dkr.ecr.us-east-1.amazonaws.com/ci-build-image/shippable-all
+    image_tag: v1
     pull: true
 
   ci:
-    - sudo apt-get install cpio
-    - source ~/.nvm/nvm.sh && nvm install $NODE_JS_VERSION && npm install npm@latest -g
-    - mkdir -p shippable/testresults
-    - mkdir -p shippable/codecoverage
-    - curl -u$ARTIFACTORY_USERNAME:$ARTIFACTORY_PASSWORD https://accolade.jfrog.io/accolade/api/npm/auth -o $HOME/.npmrc
-    - npm config set registry https://accolade.jfrog.io/accolade/api/npm/npm-virtual
-    - yarn install
+    - source /setup.sh
+    - echo "--ignore-engines true" > .yarnrc
+    - ${BUILD_SCRIPTS}/node/install-dependencies.sh
+    - source ${BUILD_SCRIPTS}/node/version.sh
     - yarn test
-    - if [[ $BRANCH =~ ^develop$|^release/.*$ ]]; then ./build-utils/sonar-scan.sh -v $BUILD_NUMBER ; fi
+    - if [[ $BRANCH =~ ^master$|^develop$|^release/.*$ ]]; then ${BUILD_SCRIPTS}/sonar-scan.sh -o ; fi
 
   # uncomment this step once test results are being sent as output
   # post_ci:
