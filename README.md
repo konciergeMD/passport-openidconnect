@@ -5,6 +5,11 @@ with [OpenID Connect](http://openid.net/connect/). For purposes of adding and re
 
 Accolade OIC implementation will redirect to another url for user info. This version will redirect there.
 
+After verifying changes/fixes, this package must be manully uploaded to Artifactory
+* Bump Version in `package.json`
+* Ensure Artifactory is locally configured
+* `npm publish`
+
 This module lets you authenticate using OpenID Connect in your Node.js
 applications.  By plugging into Passport, OpenID Connect authentication can be
 easily and unobtrusively integrated into any application or framework that
