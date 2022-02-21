@@ -1,3 +1,5 @@
 Changelog: 
- Release v1.0.7 to v1.0.7
+ Release v.0.7 to v2.0.0
+
+ Removed `pkginfo` dependency
 
