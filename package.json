@@ -1,6 +1,6 @@
 {
   "name": "passport-openidconnect",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "OpenID Connect authentication strategy for Passport. Modified by Accolade.",
   "repository": {
     "type": "git",
@@ -29,7 +29,6 @@
     "@types/passport": "0.3.4",
     "oauth": "0.9.x",
     "passport": "0.4.1",
-    "pkginfo": "0.2.x",
     "webfinger": "0.3.x"
   },
   "devDependencies": {

@@ -172,10 +172,6 @@ pause@0.0.1:
   version "0.0.1"
   resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/pause/-/pause-0.0.1.tgz#1d408b3fdb76923b9543d96fb4c9dfd535d9cb5d"
 
-pkginfo@0.2.x:
-  version "0.2.3"
-  resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/pkginfo/-/pkginfo-0.2.3.tgz#7239c42a5ef6c30b8f328439d9b9ff71042490f8"
-
 sax@>=0.1.1:
   version "1.2.2"
   resolved "https://accolade.jfrog.io/accolade/api/npm/npm-virtual/sax/-/sax-1.2.2.tgz#fd8631a23bc7826bef5d871bdb87378c95647828"

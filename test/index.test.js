@@ -3,10 +3,6 @@ var openid = require('index');
 
 describe('passport-openid', function() {
     
-  it('should export version', function() {
-    expect(openid.version).to.be.a('string');
-  });
-    
   it('should export Strategy', function() {
     expect(openid.AcpStrategy).to.be.a('function');
   });
