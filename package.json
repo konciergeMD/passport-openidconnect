@@ -1,13 +1,13 @@
 {
   "name": "passport-openidconnect",
-  "version": "2.0.4",
+  "version": "2.0.6",
   "description": "OpenID Connect authentication strategy for Passport. Modified by Accolade.",
   "repository": {
     "type": "git",
     "url": "git://github.com/konciergeMD/passport-openidconnect.git"
   },
   "publishConfig": {
-    "registry": "https://accolade.jfrog.io/accolade/api/npm/npm-local"
+    "registry": "https://accolade.jfrog.io/artifactory/api/npm/npm-local/"
   },
   "bugs": {
     "url": "http://github.com/konciergeMD/passport-openidconnect/issues"
@@ -25,7 +25,7 @@
   ],
   "main": "./lib",
   "dependencies": {
-    "@types/express-session": "1.15.3",
+    "@types/express-session": "1.15.11",
     "@types/passport": "0.3.4",
     "oauth": "0.9.x",
     "passport": "^0.7.0",
