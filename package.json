@@ -28,12 +28,12 @@
     "@types/express-session": "1.15.3",
     "@types/passport": "0.3.4",
     "oauth": "0.9.x",
-    "passport": "0.4.1",
+    "passport": "^0.7.0",
     "webfinger": "0.3.x"
   },
   "devDependencies": {
     "chai": "1.x.x",
-    "mocha": "1.x.x"
+    "mocha": "^10.7.3"
   },
   "scripts": {
     "test": "NODE_PATH=./lib node_modules/.bin/mocha --reporter spec --require test/node/bootstrap test/*.test.js"
